@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.full_screen {
+    width: 100%;
+    height: 100vh;
+    background: url(img/sky.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.road{
+    background: url(img/road.jpg);
+    width: 500%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+    animation: road 5s linear infinite;
+    background-repeat: repeat-x;
+}
+
+@keyframes road{
+    100%{
+        transform: translateX(-3400px);
+    }
+}
+.building{
+    background: url(img/city.png);
+    width: 500%;
+    height: 250px;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+    position: absolute;
+    animation: building 20s linear infinite;
+    background-repeat: repeat-x;
+    display: block;
+}
+
+@keyframes building{
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+
+.car{
+    width: 400px;
+    left: 50%;
+    bottom: 100px;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.car img{
+    width: 100%;
+    animation: car 1s linear infinite;
+}
+
+@keyframes car{
+    100%{
+        transform: translateY(-1px);
+    }
+    
+    50%{
+        transform: translateY(-1px);
+    }
+    100%{
+        transform: translateY(-1px);
+    }
+}
+
+.chaka{
+    left: 50%;
+    bottom: 178px;
+    position: absolute;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.chaka img{
+    width: 72px;
+    height: 72px;
+}
+.back {
+	left: -165px;
+	position: absolute;
+    animation: chaka 1s linear infinite;
+}
+
+.front {
+	left: 80px;
+	position: absolute;
+    animation: chaka 1s linear infinite;
+}
+
+@keyframes chaka{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
